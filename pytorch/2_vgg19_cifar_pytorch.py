@@ -111,7 +111,7 @@ class ConvNet(nn.Module):
 
 def weights_init(m):
     if isinstance(m, nn.Conv2d) or isinstance(m, nn.Linear):
-        nn.init.xavier_uniform_(m.weight.data)
+        nn.init.kaiming_uniform_(m.weight.data)
         nn.init.zeros_(m.bias.data)
 
 model = ConvNet()

@@ -24,7 +24,7 @@ using namespace eddl;
 
 layer defblock(layer l, bool bn, int nf, int reps){
     for(int i = 0; i < reps; i++){
-      l = GlorotUniform(Conv(l, nf, {3, 3}));
+      l = HeUniform(Conv(l, nf, {3, 3}));
       if(bn) l = BatchNormalization(l, 0.99, 0.001, true, "");
       l = ReLu(l);
     }
@@ -38,10 +38,10 @@ int main(int argc, char **argv) {
 
     // Settings
     int epochs = 50;
-    int batch_size = 100;
+    int batch_size = 50;
     int num_classes = 10;
 
-    bool bn = true;
+    bool bn = false;
 
     // Define network
     layer in=Input({3, 32, 32});
@@ -55,11 +55,11 @@ int main(int argc, char **argv) {
 
     l = Flatten(l);
     for(int i = 0; i < 2; i++){
-      l = GlorotUniform(Dense(l, 4096));
+      l = HeUniform(Dense(l, 4096));
       if(bn) l = BatchNormalization(l, 0.99, 0.001, true, "");;
       l = ReLu(l);
     }
-    layer out = Softmax(GlorotUniform(Dense(l, num_classes)));
+    layer out = Softmax(HeUniform(Dense(l, num_classes)));
 
     model net = Model({in}, {out});
     net->verbosity_level = 0;

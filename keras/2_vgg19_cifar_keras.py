@@ -28,9 +28,9 @@ def addbn(model, bn):
 def block(nf, model, reps, bn, input_sh = None):
 	for i in range(reps):
 		if input_sh is None:
-			model.add(Conv2D(filters=nf, kernel_size=(3,3), padding="same"))
+			model.add(Conv2D(filters=nf, kernel_size=(3,3), padding="same", kernel_initializer="he_uniform"))
 		else:
-			model.add(Conv2D(input_shape=input_sh,filters=nf,kernel_size=(3,3),padding="same"))
+			model.add(Conv2D(input_shape=input_sh,filters=nf,kernel_size=(3,3),padding="same", kernel_initializer="he_uniform"))
 		addbn(model, bn)
 		model.add(ReLU())
 	model.add(MaxPool2D(pool_size=(2,2),strides=(2,2)))
@@ -46,11 +46,11 @@ block(512, model, 4, bn)
 model.add(Flatten())
 
 for i in range(2):
-	model.add(Dense(units=4096))
+	model.add(Dense(units=4096, kernel_initializer="he_uniform"))
 	addbn(model, bn)
 	model.add(ReLU())
 
-model.add(Dense(units=10, activation="softmax"))
+model.add(Dense(units=10, activation="softmax", kernel_initializer="he_uniform"))
 
 from keras.optimizers import Adam
 opt = Adam(lr=0.00001, epsilon=1e-06)
