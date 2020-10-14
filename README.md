@@ -3,7 +3,7 @@
 ### VGGs
 #### VGG16
 |Without batchnorm|Keras|Pytorch|EDDL|
-|------------- | ---------- | ----------- ||
+|-----------------|----------|-----------|------|
 |Train accuracy (%)|99.2|99.2|98.9|
 |Test accuracy (%)|77.4|77.9|74.6|
 |Time per epoch (s)|67|77|146|
