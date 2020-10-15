@@ -118,7 +118,7 @@ plt.xlabel("Epochs")
 plt.savefig("results/vgg19_nobn.png")
 #plt.show()
 plt.clf()
-'''
+
 #VGG19 con batchnorm
 with open("results/keras/keras_vgg19_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
@@ -130,7 +130,7 @@ with open("results/pytorch/pytorch_vgg19_batchnorm", "rb") as f:
 with open("results/pytorch/pytorch_val_vgg19_batchnorm", "rb") as f:
 	acc_pytorch_te = pickle.load(f)
 
-acc_eddl_tr, acc_eddl_te = get_eddl_res("results/eddl/eddl_vgg19_bn.txt")
+acc_eddl_tr, acc_eddl_te, mtime = get_eddl_res("results/eddl/eddl_vgg19_bn.txt")
 
 plt.plot(acc_keras_tr)
 plt.plot(acc_keras_te)
@@ -145,4 +145,10 @@ plt.xlabel("Epochs")
 plt.savefig("results/vgg19_bn.png")
 #plt.show()
 plt.clf()
-'''
+
+print("VGG19 BN:", mtime)
+print("Accuracy")
+print("\t- Keras:", round(acc_keras_tr[-1]*100, 1), round(acc_keras_te[-1]*100, 1))
+print("\t- Pytorch:", round(acc_pytorch_tr[-1]*100, 1), round(acc_pytorch_te[-1]*100, 1))
+print("\t- EDDL:", round(acc_eddl_tr[-1]*100, 1), round(acc_eddl_te[-1]*100, 1))
+print()
