@@ -17,7 +17,7 @@ def get_eddl_res(fname):
 		acc_eddl_te = [float(l.split("metric[categorical_accuracy]=")[1].split(" ) ")[0]) for l in lineste]
 		return acc_eddl, acc_eddl_te, round(np.mean(times))
 
-#VGG16 sin batchnorm
+#VGG16 without batchnorm
 with open("results/keras/keras_vgg16_no_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_vgg16_no_batchnorm", "rb") as f:
@@ -43,7 +43,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("VGG16 sin batchnorm")
+plt.title("VGG16 without batchnorm")
 plt.legend(["keras_tr", "keras_te", "eddl_tr", "eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -52,7 +52,7 @@ plt.savefig("results/vgg16_nobn.png")
 plt.clf()
 
 
-#VGG16 con batchnorm
+#VGG16 with batchnorm
 with open("results/keras/keras_vgg16_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_vgg16_batchnorm", "rb") as f:
@@ -77,7 +77,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("VGG16 con batchnorm")
+plt.title("VGG16 with batchnorm")
 plt.legend(["keras_tr", "keras_te", "eddl_tr", "eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -85,7 +85,7 @@ plt.savefig("results/vgg16_bn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 sin batchnorm
+#VGG19 without batchnorm
 with open("results/keras/keras_vgg19_no_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_vgg19_no_batchnorm", "rb") as f:
@@ -111,7 +111,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("VGG19 sin batchnorm")
+plt.title("VGG19 without batchnorm")
 plt.legend(["keras_tr", "keras_te", "eddl_tr", "eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -119,7 +119,7 @@ plt.savefig("results/vgg19_nobn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 con batchnorm
+#VGG19 with batchnorm
 with open("results/keras/keras_vgg19_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_vgg19_batchnorm", "rb") as f:
@@ -138,7 +138,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("VGG19 con batchnorm")
+plt.title("VGG19 with batchnorm")
 plt.legend(["keras_tr", "keras_te", "eddl_tr", "eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")

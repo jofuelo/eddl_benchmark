@@ -17,7 +17,7 @@ def get_eddl_res(fname):
 		acc_eddl_te = [float(l.split("metric[categorical_accuracy]=")[1].split(" ) ")[0]) for l in lineste]
 		return acc_eddl, acc_eddl_te, round(np.mean(times))
 
-#VGG16 sin batchnorm
+#VGG16 without batchnorm
 with open("results/keras/keras_resnet18_no_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet18_no_batchnorm", "rb") as f:
@@ -43,7 +43,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet18 sin batchnorm")
+plt.title("resnet18 without batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -52,7 +52,7 @@ plt.savefig("results/resnet18_nobn.png")
 plt.clf()
 
 
-#VGG16 con batchnorm
+#VGG16 with batchnorm
 with open("results/keras/keras_resnet18_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet18_batchnorm", "rb") as f:
@@ -77,7 +77,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet18 con batchnorm")
+plt.title("resnet18 with batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -85,7 +85,7 @@ plt.savefig("results/resnet18_bn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 sin batchnorm
+#VGG19 without batchnorm
 with open("results/keras/keras_resnet34_no_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet34_no_batchnorm", "rb") as f:
@@ -111,7 +111,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet34 sin batchnorm")
+plt.title("resnet34 without batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -119,7 +119,7 @@ plt.savefig("results/resnet34_nobn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 con batchnorm
+#VGG19 with batchnorm
 with open("results/keras/keras_resnet34_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet34_batchnorm", "rb") as f:
@@ -144,7 +144,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet34 con batchnorm")
+plt.title("resnet34 with batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -152,7 +152,7 @@ plt.savefig("results/resnet34_bn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 sin batchnorm
+#VGG19 without batchnorm
 with open("results/keras/keras_resnet50_no_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet50_no_batchnorm", "rb") as f:
@@ -178,7 +178,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet50 sin batchnorm")
+plt.title("resnet50 without batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
@@ -186,7 +186,7 @@ plt.savefig("results/resnet50_nobn.png")
 #plt.show()
 plt.clf()
 
-#VGG19 con batchnorm
+#VGG19 with batchnorm
 with open("results/keras/keras_resnet50_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
 with open("results/keras/keras_val_resnet50_batchnorm", "rb") as f:
@@ -211,7 +211,7 @@ plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
 plt.plot(acc_pytorch_tr)
 plt.plot(acc_pytorch_te)
-plt.title("resnet50 con batchnorm")
+plt.title("resnet50 with batchnorm")
 plt.legend(["results/keras/keras_tr", "results/keras/keras_te", "results/eddl/eddl_tr", "results/eddl/eddl_te", "pytorch_tr", "pytorch_te"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
