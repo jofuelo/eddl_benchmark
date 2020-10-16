@@ -1,4 +1,11 @@
 # Eddl benchmarks results
+The results were obtained using the following configuration:
+* EDDL version: 0.7.1
+* Pytorch version: 1.6.0
+* Keras version: 2.4.3
+* Keras backend: tensorflow
+* Tensorflow version: 2.2.0
+* Executed on: GPU Nvidia GeForce GTX 1050Ti
 ## Cifar10
 ### VGGs
 #### VGG16
@@ -31,9 +38,11 @@
 
 |With batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|Train accuracy (%)||||
-|Test accuracy (%)||||
-|Time per epoch (s)|120|135||
+|Train accuracy (%)|98.4|98.8|98.8|
+|Test accuracy (%)|59.9|59.7|61.0|
+|Time per epoch (s)|120|135|260|
+
+![Results plot](results/vgg19_bn.png)
 
 ### Resnets
 
