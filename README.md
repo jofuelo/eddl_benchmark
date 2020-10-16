@@ -1,11 +1,11 @@
 # Eddl benchmarks results
 The following results were obtained using the following configuration:
-EDDL version: 0.7.1
-Pytorch version: 1.6.0
-Keras version: 2.4.3
-Keras backend: tensorflow
-Tensorflow version: 2.2.0
-Executed on: GPU 
+* EDDL version: 0.7.1
+* Pytorch version: 1.6.0
+* Keras version: 2.4.3
+* Keras backend: tensorflow
+* Tensorflow version: 2.2.0
+* Executed on: GPU Nvidia GeForce GTX 1050Ti
 ## Cifar10
 ### VGGs
 #### VGG16
