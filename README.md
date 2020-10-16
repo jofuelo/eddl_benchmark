@@ -1,5 +1,5 @@
 # Eddl benchmarks results
-The following results were obtained using the following configuration:
+The results were obtained using the following configuration:
 * EDDL version: 0.7.1
 * Pytorch version: 1.6.0
 * Keras version: 2.4.3
