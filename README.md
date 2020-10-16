@@ -32,7 +32,7 @@ The results were obtained using the following configuration:
 |Test accuracy (%)|66.0|65.5|68.2|
 |Time per epoch (s)|114|129|190|
 
-\* Este experimento se hizo con HeUniform como inicializador en lugar de GlorotUniform, que es el que se usó en los demás
+\* This experiment used HeUniform as weight initializer insted of GlorotUniform. GlorotUniform was the initializer for all the other experiments.
 
 ![Results plot](results/vgg19_nobn.png)
 
