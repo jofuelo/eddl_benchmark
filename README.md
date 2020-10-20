@@ -16,7 +16,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|99.2|99.2|98.9|
 |Test accuracy (%)|77.4|77.9|74.6|
 |GPU Time per epoch (s)|67|77|146|
-|CPU Time per epoch (s)||1932|3107|
+|CPU Time per epoch (s)|1932|916|3107|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -24,7 +24,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|99.1|99.1|99.3|
 |Test accuracy (%)|71.7|76.2|76.4|
 |GPU Time per epoch (s)|72|81|204|
-|CPU Time per epoch (s)||2028|2846|
+|CPU Time per epoch (s)|2028|993|2846|
 
 
 #### VGG19
@@ -33,7 +33,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.7|98.7|98.9|
 |Test accuracy (%)|66.0|65.5|68.2|
 |GPU Time per epoch (s)|114|129|190|
-|CPU Time per epoch (s)||2482|3872|
+|CPU Time per epoch (s)|2482|1304|3872|
 
 \* This experiment used HeUniform as weight initializer insted of GlorotUniform. GlorotUniform was the initializer for all the other experiments.
 
@@ -43,7 +43,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.4|98.8|98.8|
 |Test accuracy (%)|59.9|59.7|61.0|
 |GPU Time per epoch (s)|120|135|260|
-|CPU Time per epoch (s)||2679|3838|
+|CPU Time per epoch (s)|2679|1401|3838|
 
 
 ### Resnets
@@ -54,7 +54,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|99.0|98.7|98.7|
 |Test accuracy (%)|67.6|66.4|67.3|
 |GPU Time per epoch (s)|40|62|36|
-|CPU Time per epoch (s)||1534|932|
+|CPU Time per epoch (s)|1534|475|932|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -62,7 +62,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.7|98.5|98.4|
 |Test accuracy (%)|64.0|65.7|64.8|
 |GPU Time per epoch (s)|42|64|49|
-|CPU Time per epoch (s)||1505|1207|
+|CPU Time per epoch (s)|1505|516|1207|
 
 
 #### Resnet34
@@ -71,7 +71,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.7|98.8|98.7|
 |Test accuracy (%)|66.6|67.8|66.1|
 |GPU Time per epoch (s)|73|103|65|
-|CPU Time per epoch (s)||2554|1674|
+|CPU Time per epoch (s)|2554|891|1674|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -79,7 +79,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.1|98.2|98.2|
 |Test accuracy (%)|66.4|65.5|60.4|
 |GPU Time per epoch (s)|76|107|89|
-|CPU Time per epoch (s)||2600|2119|
+|CPU Time per epoch (s)|2600|892|2119|
 
 
 #### Resnet50
@@ -88,7 +88,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|98.7|98.6|98.7|
 |Test accuracy (%)|68.4|68.1|66.4|
 |GPU Time per epoch (s)|75|89|75|
-|CPU Time per epoch (s)||2446|1684|
+|CPU Time per epoch (s)|2446|685|1684|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -96,7 +96,7 @@ The results were obtained using the following configuration:
 |Train accuracy (%)|97.1|97.1|97.6|
 |Test accuracy (%)|61.3|63.1|61.9|
 |GPU Time per epoch (s)|84|97|132|
-|CPU Time per epoch (s)||2520|2622|
+|CPU Time per epoch (s)|2520|822|2622|
 
 ### Plots
 ![Results plot](results/vgg16_nobn.png)
