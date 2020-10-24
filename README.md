@@ -8,6 +8,19 @@ The results were obtained using the following configuration:
 * GPU model: Nvidia GeForce GTX 1050Ti
 * CPU model: Intel(R) Core(TM) i7-7700HQ 2.80GHz
 * Graphics and accuracy results obtained executing on GPU
+## Detected anomalies
+### Time
+* PyEDDL usually lasts a bit more than EDDL. However, with VGGs in CPU, that increase is abnormaly huge (more than double).
+* In Resnet50 with batchnorm in CPU PyEDDL lasts less than EDDL. This may be circumstantial as it was tested only in one epoch.
+* The time increase due to BatchNorm is much greater in EDDL than in Keras or Pytorch.
+* EDDL times are quite competitive in Resnets but much worse than Keras and Pytorch in VGGs.
+* EDDL and PyEDDL last more with batchnorm than without it in CPU with VGGs.
+
+### Accuracy
+* EDDL converges slower than Keras and Pytorch without batchnorm, specially in VGGs.
+* With VGG16, it doesn't reach the same accuracy as Keras and Pytorch. With VGG19 it didn't reach it neither, but using HeUniform instead of GlorotUniform as initializer seemed to solve the problem.
+* In general, Pytorch's test accuracy is more stable and a bit higher than Keras and EDDL when using batchnorm.
+
 ## Cifar10
 ### VGGs
 #### VGG16
