@@ -35,9 +35,10 @@ layer defblock(layer l, bool bn, int nf, int reps){
 int main(int argc, char **argv) {
   // download CIFAR data
   download_cifar10();
+    bool gpu = false;
 
     // Settings
-    int epochs = 50;
+    int epochs = gpu ? 50 : 1;
     int batch_size = 100;
     int num_classes = 10;
 
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
 		adam(0.0001), // Optimizer
         {"soft_cross_entropy"}, // Losses
         {"categorical_accuracy"}, // Metrics
-        CS_GPU({1}) // one GPU
+        gpu ? CS_GPU({1}) : CS_CPU() // one GPU
     );
 
     // View model

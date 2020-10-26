@@ -12,7 +12,8 @@ import pickle
 from torchsummary import summary
 
 bn = int(sys.argv[1]) == 1
-device = torch.device("cuda:0")
+gpu = int(sys.argv[2]) == 1 if len(sys.argv) > 2 else True
+device = torch.device("cuda:0" if gpu else "cpu")
 print("DEVICE:", device)
 
 class ResnetBlock(nn.Module):
@@ -77,7 +78,7 @@ class ConvNet(nn.Module):
         return out
 
 
-num_epochs = 50
+num_epochs = 50 if gpu else 1
 num_classes = 10
 batch_size = 50
 learning_rate = 0.0001
@@ -97,11 +98,6 @@ def weights_init(m):
 model = ConvNet()
 model.apply(weights_init)
 
-
-import torch.onnx
-from torch.autograd import Variable
-dummy_input = Variable(torch.randn(1,3,32,32))
-torch.onnx.export(model, dummy_input, "resnet50.onnx")
 
 model=model.to(device)
 summary(model, (3,32,32))
@@ -145,29 +141,31 @@ for epoch in range(num_epochs):
     print('Epoch [{}/{}], Accuracy: {:.2f}%'
           .format(epoch + 1, num_epochs, (correct / total) * 100))
 
-
-    total_test = 0
-    correct_test = 0
-    for i, (images, labels) in enumerate(test_loader):
-        images = images.to(device)
-        labels = labels.to(device)
-
-        # Run the forward pass
-        outputs = model(images)
-
-        # Track the accuracy
-        total_test += labels.size(0)
-        _, predicted = torch.max(outputs.data, 1)
-        correct_test += (predicted == labels).sum().item()
-    acc_list_test.append(correct_test / total_test)
-    print("Test")
-    print('Epoch [{}/{}], Accuracy: {:.2f}%'
-          .format(epoch + 1, num_epochs, (correct_test / total_test) * 100))
     times.append(time()-s)
+
+    if gpu:
+        total_test = 0
+        correct_test = 0
+        for i, (images, labels) in enumerate(test_loader):
+            images = images.to(device)
+            labels = labels.to(device)
+
+            # Run the forward pass
+            outputs = model(images)
+
+            # Track the accuracy
+            total_test += labels.size(0)
+            _, predicted = torch.max(outputs.data, 1)
+            correct_test += (predicted == labels).sum().item()
+        acc_list_test.append(correct_test / total_test)
+        print("Test")
+        print('Epoch [{}/{}], Accuracy: {:.2f}%'
+              .format(epoch + 1, num_epochs, (correct_test / total_test) * 100))
 
 
 print("Mean time:", np.mean(times))
-with open("results/pytorch/pytorch_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-    pickle.dump(acc_list, f)
-with open("results/pytorch/pytorch_val_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-    pickle.dump(acc_list_test, f)
+if gpu:
+    with open("results/pytorch/pytorch_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+        pickle.dump(acc_list, f)
+    with open("results/pytorch/pytorch_val_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+        pickle.dump(acc_list_test, f)

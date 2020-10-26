@@ -3,19 +3,23 @@ from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPool2D , Flatten, BatchNormalization, ReLU
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
-
 from keras.datasets import cifar10
 import sys
 import pickle
 import tensorflow as tf
-gpus = tf.config.experimental.list_physical_devices("GPU")
-tf.config.experimental.set_memory_growth(gpus[0], True)
+from keras.utils import np_utils
+from keras.optimizers import Adam
+import time
+
+gpu = int(sys.argv[2]) == 1 if len(sys.argv) > 2 else True
+if gpu:
+	gpus = tf.config.experimental.list_physical_devices("GPU")
+	tf.config.experimental.set_memory_growth(gpus[0], True)
 
 (x_train,y_train),(x_test,y_test)=cifar10.load_data()
 x_train = x_train / 255
 x_test = x_test / 255
 
-from keras.utils import np_utils
 y_train=np_utils.to_categorical(y_train,10)
 y_test=np_utils.to_categorical(y_test,10)
 
@@ -52,22 +56,34 @@ for i in range(2):
 
 model.add(Dense(units=10, activation="softmax"))
 
-
-
-from keras.optimizers import Adam
 opt = Adam(lr=0.0001, epsilon=1e-06)
 model.compile(optimizer=opt, loss=keras.losses.categorical_crossentropy, metrics=['accuracy'])
 
 model.summary()
 
+class TimeHistory(keras.callbacks.Callback):
+    def on_train_begin(self, logs={}):
+        self.times = []
+
+    def on_epoch_begin(self, batch, logs={}):
+        self.epoch_time_start = time.time()
+
+    def on_epoch_end(self, batch, logs={}):
+        self.times.append(time.time() - self.epoch_time_start)
+
+time_callback = TimeHistory()
+
 hist = model.fit(x_train, y_train,
-	epochs=50,
+	epochs=10,
+	callbacks=[time_callback],
 	batch_size=100,
-	validation_data=(x_test, y_test)
+	#validation_data=(x_test, y_test)
 	)
 
-with open("results/keras/keras_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-	pickle.dump(hist.history["accuracy"], f)
-with open("results/keras/keras_val_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-	pickle.dump(hist.history["val_accuracy"], f)
-print(hist.history["accuracy"], hist.history["val_accuracy"])
+print("Mean Time:", np.mean(time_callback.times))
+if gpu:
+	with open("results/keras/keras_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+		pickle.dump(hist.history["accuracy"], f)
+	with open("results/keras/keras_val_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+		pickle.dump(hist.history["val_accuracy"], f)
+	print(hist.history["accuracy"], hist.history["val_accuracy"])

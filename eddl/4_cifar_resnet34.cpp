@@ -39,13 +39,14 @@ layer resnet_block(layer l0, int nf, bool bn, int reps, bool downsample){
 int main(int argc, char **argv) {
   // download CIFAR data
   download_cifar10();
+    bool gpu = false;
 
     // Settings
-    int epochs = 50;
+    int epochs = gpu ? 50 : 1;
     int batch_size = 50;
     int num_classes = 10;
 
-    bool bn = false;
+    bool bn = true;
 
 
     // Define network
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
 		adam(0.0001), // Optimizer
         {"soft_cross_entropy"}, // Losses
         {"categorical_accuracy"}, // Metrics
-        CS_GPU({1}) // one GPU
+        gpu ? CS_GPU({1}) : CS_CPU() // one GPU
     );
 
     // View model

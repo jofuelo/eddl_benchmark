@@ -24,8 +24,12 @@ using namespace eddl;
 
 layer defblock(layer l, bool bn, int nf, int reps){
     for(int i = 0; i < reps; i++){
-      l = HeUniform(Conv(l, nf, {3, 3}));
-      if(bn) l = BatchNormalization(l, 0.99, 0.001, true, "");
+      if(bn){
+        l = GlorotUniform(Conv(l, nf, {3, 3}));
+        l = BatchNormalization(l, 0.99, 0.001, true, "");
+      }
+      else
+        l = HeUniform(Conv(l, nf, {3, 3}));
       l = ReLu(l);
     }
     l = MaxPool(l, {2, 2}, {2, 2}, "valid"); 
@@ -35,13 +39,14 @@ layer defblock(layer l, bool bn, int nf, int reps){
 int main(int argc, char **argv) {
   // download CIFAR data
   download_cifar10();
+    bool gpu = false;
 
     // Settings
-    int epochs = 50;
+    int epochs = gpu ? 50 : 1;
     int batch_size = 50;
     int num_classes = 10;
 
-    bool bn = false;
+    bool bn = true;
 
     // Define network
     layer in=Input({3, 32, 32});
@@ -55,12 +60,19 @@ int main(int argc, char **argv) {
 
     l = Flatten(l);
     for(int i = 0; i < 2; i++){
-      l = HeUniform(Dense(l, 4096));
-      if(bn) l = BatchNormalization(l, 0.99, 0.001, true, "");;
+      if(bn){
+        l = GlorotUniform(Dense(l, 4096));
+        l = BatchNormalization(l, 0.99, 0.001, true, "");
+      }
+      else
+        l = HeUniform(Dense(l, 4096));
       l = ReLu(l);
     }
-    layer out = Softmax(HeUniform(Dense(l, num_classes)));
-
+    layer out;
+    if(bn)
+        out = Softmax(GlorotUniform(Dense(l, num_classes)));
+    else
+        out = Softmax(HeUniform(Dense(l, num_classes)));
     model net = Model({in}, {out});
     net->verbosity_level = 0;
 
@@ -72,7 +84,7 @@ int main(int argc, char **argv) {
 		adam(0.00001), // Optimizer
         {"soft_cross_entropy"}, // Losses
         {"categorical_accuracy"}, // Metrics
-        CS_GPU({1}) // one GPU
+        gpu ? CS_GPU({1}) : CS_CPU() // one GPU
     );
 
     // View model

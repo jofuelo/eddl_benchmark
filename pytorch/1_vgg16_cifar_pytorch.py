@@ -10,8 +10,12 @@ from torch.utils.data import DataLoader
 import sys
 import pickle
 
+bn = int(sys.argv[1]) == 1
+gpu = int(sys.argv[2]) == 1 if len(sys.argv) > 2 else True
+device = torch.device("cuda:0" if gpu else "cpu")
+print("DEVICE:", device)
 
-num_epochs = 50
+num_epochs = 50 if gpu else 1
 num_classes = 10
 batch_size = 100
 learning_rate = 0.0001
@@ -22,8 +26,6 @@ test_dataset = torchvision.datasets.CIFAR10(root="./dataset_pytorch", train=Fals
 
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
-
-bn = int(sys.argv[1]) == 1
 
 def createBlock(nf0, nf, bn, reps):
     if bn:
@@ -111,9 +113,6 @@ def weights_init(m):
 
 model = ConvNet()
 model.apply(weights_init)
-
-device = torch.device("cuda:0")#"cuda:0" if torch.cuda.is_available() else "cpu")
-print("DEVICE:", device)
 model.to(device)
 
 from torchsummary import summary
@@ -157,30 +156,30 @@ for epoch in range(num_epochs):
     print("Train")
     print('Epoch [{}/{}], Accuracy: {:.2f}%'
           .format(epoch + 1, num_epochs, (correct / total) * 100))
-
-
-    total_test = 0
-    correct_test = 0
-    for i, (images, labels) in enumerate(test_loader):
-        images = images.to(device)
-        labels = labels.to(device)
-
-        # Run the forward pass
-        outputs = model(images)
-
-        # Track the accuracy
-        total_test += labels.size(0)
-        _, predicted = torch.max(outputs.data, 1)
-        correct_test += (predicted == labels).sum().item()
-    acc_list_test.append(correct_test / total_test)
-    print("Test")
-    print('Epoch [{}/{}], Accuracy: {:.2f}%'
-          .format(epoch + 1, num_epochs, (correct_test / total_test) * 100))
     times.append(time()-s)
 
+    if gpu:
+        total_test = 0
+        correct_test = 0
+        for i, (images, labels) in enumerate(test_loader):
+            images = images.to(device)
+            labels = labels.to(device)
+
+            # Run the forward pass
+            outputs = model(images)
+
+            # Track the accuracy
+            total_test += labels.size(0)
+            _, predicted = torch.max(outputs.data, 1)
+            correct_test += (predicted == labels).sum().item()
+        acc_list_test.append(correct_test / total_test)
+        print("Test")
+        print('Epoch [{}/{}], Accuracy: {:.2f}%'
+              .format(epoch + 1, num_epochs, (correct_test / total_test) * 100))
 
 print("Mean time:", np.mean(times))
-with open("results/pytorch/pytorch_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-    pickle.dump(acc_list, f)
-with open("results/pytorch/pytorch_val_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
-    pickle.dump(acc_list_test, f)
+if gpu:
+    with open("results/pytorch/pytorch_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+        pickle.dump(acc_list, f)
+    with open("results/pytorch/pytorch_val_vgg16_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
+        pickle.dump(acc_list_test, f)
