@@ -40,7 +40,7 @@ The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newe
 #### Resnet18
 |Without batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)||||
+|GPU Time per epoch (s)|||38|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -51,7 +51,7 @@ The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newe
 #### Resnet34
 |Without batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)||||
+|GPU Time per epoch (s)|||65|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
@@ -62,7 +62,7 @@ The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newe
 #### Resnet50
 |Without batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)||||
+|GPU Time per epoch (s)|||80|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
