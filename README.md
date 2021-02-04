@@ -9,6 +9,66 @@ The results were obtained using the following configuration:
 * CPU model: Intel(R) Core(TM) i7-7700HQ 2.80GHz
 * Graphics and accuracy results obtained executing on GPU
 
+## CUDNN8
+The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newest optimizations of eddl. The rest of them were obtained with an older version of CUDNN 8
+## Cifar10
+### VGGs
+#### VGG16
+|Without batchnorm|Keras|Pytorch|EDDL|
+|-----------------|----------|-----------|------|
+|GPU Time per epoch (s)||||68.0|
+
+
+|With batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)||||73.0|
+
+
+#### VGG19
+|Without batchnorm*|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)||||115.0|
+
+
+|With batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)||||124.0|
+
+
+### Resnets
+
+#### Resnet18
+|Without batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
+
+|With batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
+
+#### Resnet34
+|Without batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
+
+|With batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
+
+#### Resnet50
+|Without batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
+
+|With batchnorm|Keras|Pytorch|EDDL|
+|------------- | ---------- | ----------- |------|
+|GPU Time per epoch (s)|||||
+
 ## Detected anomalies
 ### Time
 * PyEDDL usually lasts a bit more than EDDL. However, with VGGs in CPU, that increase is abnormaly huge (more than double).
