@@ -16,23 +16,23 @@ The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newe
 #### VGG16
 |Without batchnorm|Keras|Pytorch|EDDL|
 |-----------------|----------|-----------|------|
-|GPU Time per epoch (s)|||68.0|
+|GPU Time per epoch (s)||88|68|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|||73.0|
+|GPU Time per epoch (s)||93|73|
 
 
 #### VGG19
 |Without batchnorm*|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|||115.0|
+|GPU Time per epoch (s)||137|115|
 
 
 |With batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|||124.0|
+|GPU Time per epoch (s)|||124|
 
 
 ### Resnets
