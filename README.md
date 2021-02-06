@@ -32,7 +32,7 @@ The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newe
 
 |With batchnorm|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|||124|
+|GPU Time per epoch (s)||144|124|
 
 
 ### Resnets
