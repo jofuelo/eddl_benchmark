@@ -10,7 +10,8 @@ The results were obtained using the following configuration:
 * Graphics and accuracy results obtained executing on GPU
 
 ## CUDNN8
-The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newest optimizations of eddl. The rest of them were obtained with an older version of CUDNN 8
+The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newest optimizations of eddl. The rest of them were obtained with an older version of CUDNN.
+For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 as these are the versions that support CUDNN8.
 ## Cifar10
 ### VGGs
 #### VGG16
