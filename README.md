@@ -1,17 +1,11 @@
-# Eddl benchmarks results
-The results were obtained using the following configuration:
-* EDDL version: 0.7.1
-* Pytorch version: 1.6.0
-* Keras version: 2.4.3
-* Keras backend: tensorflow
-* Tensorflow version: 2.2.0
-* GPU model: Nvidia GeForce GTX 1050Ti
-* CPU model: Intel(R) Core(TM) i7-7700HQ 2.80GHz
-* Graphics and accuracy results obtained executing on GPU
 
-## CUDNN8
+
+## New results with CUDNN8
+
 The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newest optimizations of eddl. The rest of them were obtained with an older version of CUDNN.
 For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 as these are the versions that support CUDNN8.
+
+
 ## Cifar10
 ### VGGs
 #### VGG16
@@ -70,19 +64,17 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |------------- | ---------- | ----------- |------|
 |GPU Time per epoch (s)|76|122|93|
 
-## Detected anomalies
-### Time
-* PyEDDL usually lasts a bit more than EDDL. However, with VGGs in CPU, that increase is abnormaly huge (more than double).
-* In Resnet50 with batchnorm in CPU PyEDDL lasts less than EDDL. This may be circumstantial as it was tested only in one epoch.
-* The time increase due to BatchNorm is much greater in EDDL than in Keras or Pytorch.
-* EDDL times are quite competitive in Resnets but much worse than Keras and Pytorch in VGGs.
-* EDDL and PyEDDL last more with batchnorm than without it in CPU with VGGs.
-* EDDL in CPU, Resnet34 and Resnet50 without batchnorm have almost the same time. But the same networks with batchnorm present a huge difference. PyEDDL is more consistent and shows almost no difference in time between Resnet34 and Resnet50 without batchnorm and between Resnet34 and Resnet50 with it. That makes Resnet50 with batchnorm much slower in EDDL than in PyEDDL.
 
-### Accuracy
-* EDDL converges slower than Keras and Pytorch without batchnorm, specially in VGGs.
-* With VGG16, it doesn't reach the same accuracy as Keras and Pytorch. With VGG19 it didn't reach it neither, but using HeUniform instead of GlorotUniform as initializer seemed to solve the problem.
-* In general, Pytorch's test accuracy is more stable and a bit higher than Keras and EDDL when using batchnorm.
+# Eddl benchmarks results
+The results were obtained using the following configuration:
+* EDDL version: 0.7.1
+* Pytorch version: 1.6.0
+* Keras version: 2.4.3
+* Keras backend: tensorflow
+* Tensorflow version: 2.2.0
+* GPU model: Nvidia GeForce GTX 1050Ti
+* CPU model: Intel(R) Core(TM) i7-7700HQ 2.80GHz
+* Graphics and accuracy results obtained executing on GPU
 
 ## Cifar10
 ### VGGs
@@ -173,6 +165,22 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |Test accuracy (%)|61.3|63.1|61.9|-|
 |GPU Time per epoch (s)|52|92|132|135|
 |CPU Time per epoch (s)|2044|835|2622|2074|
+
+
+## Detected anomalies
+### Time
+* PyEDDL usually lasts a bit more than EDDL. However, with VGGs in CPU, that increase is abnormaly huge (more than double).
+* In Resnet50 with batchnorm in CPU PyEDDL lasts less than EDDL. This may be circumstantial as it was tested only in one epoch.
+* The time increase due to BatchNorm is much greater in EDDL than in Keras or Pytorch.
+* EDDL times are quite competitive in Resnets but much worse than Keras and Pytorch in VGGs.
+* EDDL and PyEDDL last more with batchnorm than without it in CPU with VGGs.
+* EDDL in CPU, Resnet34 and Resnet50 without batchnorm have almost the same time. But the same networks with batchnorm present a huge difference. PyEDDL is more consistent and shows almost no difference in time between Resnet34 and Resnet50 without batchnorm and between Resnet34 and Resnet50 with it. That makes Resnet50 with batchnorm much slower in EDDL than in PyEDDL.
+
+### Accuracy
+* EDDL converges slower than Keras and Pytorch without batchnorm, specially in VGGs.
+* With VGG16, it doesn't reach the same accuracy as Keras and Pytorch. With VGG19 it didn't reach it neither, but using HeUniform instead of GlorotUniform as initializer seemed to solve the problem.
+* In general, Pytorch's test accuracy is more stable and a bit higher than Keras and EDDL when using batchnorm.
+
 
 ### Plots
 ![Results plot](results/vgg16_nobn.png)
