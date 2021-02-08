@@ -19,49 +19,33 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 
 
 #### VGG19
-|Without batchnorm*|Keras|Pytorch|EDDL|
+|Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|104|137|115|
-
-
-|With batchnorm|Keras|Pytorch|EDDL|
-|------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|111|144|124|
+|Without batchnorm|104|137|115|
+|With batchnorm|111|144|124|
 
 
 ### Resnets
 
 #### Resnet18
-|Without batchnorm|Keras|Pytorch|EDDL|
+|Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|39|80|38|
-
-
-|With batchnorm|Keras|Pytorch|EDDL|
-|------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|40|82|40|
+|Without batchnorm|39|80|38|
+|With batchnorm|40|82|40|
 
 
 #### Resnet34
-|Without batchnorm|Keras|Pytorch|EDDL|
+|Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|65|138|65|
-
-
-|With batchnorm|Keras|Pytorch|EDDL|
-|------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|69|142|71|
+|Without batchnorm|65|138|65|
+|With batchnorm|69|142|71|
 
 
 #### Resnet50
-|Without batchnorm|Keras|Pytorch|EDDL|
+|Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|67|113|80|
-
-
-|With batchnorm|Keras|Pytorch|EDDL|
-|------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|76|122|93|
+|Without batchnorm|67|113|80|
+|With batchnorm|76|122|93|
 
 
 # Eddl benchmarks results
