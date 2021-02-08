@@ -8,47 +8,42 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 **Showing only GPU time per epoch**
 
 ## Cifar10
-### VGGs
-#### VGG16
+### VGG16
 |Experiment |Keras|Pytorch|EDDL|
 |-----------------|----------|-----------|------|
 |Without batchnorm|57|88|68|
 |With batchnorm|64|93|73|
 
 
-
-
-#### VGG19
+### VGG19
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|104|137|115|
 |With batchnorm|111|144|124|
 
 
-### Resnets
-
-#### Resnet18
+### Resnet18
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|39|80|38|
 |With batchnorm|40|82|40|
 
 
-#### Resnet34
+### Resnet34
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|65|138|65|
 |With batchnorm|69|142|71|
 
 
-#### Resnet50
+### Resnet50
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|67|113|80|
 |With batchnorm|76|122|93|
 
 
-# Eddl benchmarks results
+# Eddl **old**benchmarks results
 The results were obtained using the following configuration:
 * EDDL version: 0.7.1
 * Pytorch version: 1.6.0
