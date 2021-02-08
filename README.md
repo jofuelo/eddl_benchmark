@@ -11,11 +11,11 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 ### VGGs
 #### VGG16
 
-| - |Keras|Pytorch|EDDL|
+|Experiment |Keras|Pytorch|EDDL|
 |Without batchnorm|57|88|68|
 |-----------------|----------|-----------|------|
 |With batchnorm|64|93|73|
-|------------- | ---------- | ----------- |------|
+
 
 
 #### VGG19
