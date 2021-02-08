@@ -42,8 +42,10 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |Without batchnorm|67|113|80|
 |With batchnorm|76|122|93|
 
+---
 
-# Eddl **old**benchmarks results
+
+## Eddl **old** benchmarks results
 The results were obtained using the following configuration:
 * EDDL version: 0.7.1
 * Pytorch version: 1.6.0
