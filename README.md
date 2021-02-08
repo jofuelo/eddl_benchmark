@@ -5,18 +5,17 @@
 The following results were obtained with CUDNN 8 and CUDA 10.2 to check the newest optimizations of eddl. The rest of them were obtained with an older version of CUDNN.
 For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 as these are the versions that support CUDNN8.
 
+**Showing only GPU time per epoch**
 
 ## Cifar10
 ### VGGs
 #### VGG16
-|Without batchnorm|Keras|Pytorch|EDDL|
+
+| |Keras|Pytorch|EDDL|
+|Without batchnorm||57|88|68|
 |-----------------|----------|-----------|------|
-|GPU Time per epoch (s)|57|88|68|
-
-
-|With batchnorm|Keras|Pytorch|EDDL|
+|With batchnorm|64|93|73|
 |------------- | ---------- | ----------- |------|
-|GPU Time per epoch (s)|64|93|73|
 
 
 #### VGG19
