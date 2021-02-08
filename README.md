@@ -10,7 +10,6 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 ## Cifar10
 ### VGGs
 #### VGG16
-|-----------------|----------|-----------|------|
 |Experiment |Keras|Pytorch|EDDL|
 |-----------------|----------|-----------|------|
 |Without batchnorm|57|88|68|
