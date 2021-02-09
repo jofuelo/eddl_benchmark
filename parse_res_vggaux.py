@@ -23,17 +23,17 @@ with open("results/keras/keras_vgg16_no_batchnorm", "rb") as f:
 with open("results/keras/keras_val_vgg16_no_batchnorm", "rb") as f:
 	acc_keras_te = pickle.load(f)
 
-with open("results/pytorch/pytorch_vgg16_no_batchnorm", "rb") as f:
-	acc_pytorch_tr = pickle.load(f)
-with open("results/pytorch/pytorch_val_vgg16_no_batchnorm", "rb") as f:
-	acc_pytorch_te = pickle.load(f)
-
-acc_eddl_tr, acc_eddl_te, mtime = get_eddl_res("results/eddl/eddl_vgg16.txt")
+acc_eddl_tr, acc_eddl_te, mtime = get_eddl_res("results/eddl/eddl_vgg16_prev.txt")
+acc_eddl_tr_1, acc_eddl_te_1, mtime1 = get_eddl_res("results/eddl/eddl_vgg16_1.txt")
+acc_eddl_tr_2, acc_eddl_te_2, mtime2 = get_eddl_res("results/eddl/eddl_vgg16_2.txt")
+acc_eddl_tr_3, acc_eddl_te_3, mtime3 = get_eddl_res("results/eddl/eddl_vgg16_3.txt")
 print("VGG16:", mtime)
 print("Accuracy")
 print("\t- Keras:", round(acc_keras_tr[-1]*100, 1), round(acc_keras_te[-1]*100, 1))
-print("\t- Pytorch:", round(acc_pytorch_tr[-1]*100, 1), round(acc_pytorch_te[-1]*100, 1))
-print("\t- EDDL:", round(acc_eddl_tr[-1]*100, 1), round(acc_eddl_te[-1]*100, 1))
+print("\t- EDDL prev:", round(acc_eddl_tr[-1]*100, 1), round(acc_eddl_te[-1]*100, 1))
+print("\t- EDDL 1:", round(acc_eddl_tr_1[-1]*100, 1), round(acc_eddl_te_1[-1]*100, 1))
+print("\t- EDDL 2:", round(acc_eddl_tr_2[-1]*100, 1), round(acc_eddl_te_2[-1]*100, 1))
+print("\t- EDDL 3:", round(acc_eddl_tr_3[-1]*100, 1), round(acc_eddl_te_3[-1]*100, 1))
 print()
 
 
@@ -41,17 +41,21 @@ plt.plot(acc_keras_tr)
 plt.plot(acc_keras_te)
 plt.plot(acc_eddl_tr)
 plt.plot(acc_eddl_te)
-plt.plot(acc_pytorch_tr)
-plt.plot(acc_pytorch_te)
+plt.plot(acc_eddl_tr_1)
+plt.plot(acc_eddl_te_1)
+plt.plot(acc_eddl_tr_2)
+plt.plot(acc_eddl_te_2)
+plt.plot(acc_eddl_tr_3)
+plt.plot(acc_eddl_te_3)
 plt.title("VGG16 without batchnorm")
-plt.legend(["keras_tr", "keras_te", "eddl_tr", "eddl_te", "pytorch_tr", "pytorch_te"])
+plt.legend(["keras_tr", "keras_te", "eddl_tr_prev", "eddl_te_prev", "eddl_tr_1", "eddl_te_1", "eddl_tr_2", "eddl_te_2", "eddl_tr_3", "eddl_te_3"])
 plt.ylabel("Accuracy")
 plt.xlabel("Epochs")
 plt.savefig("results/vgg16_nobn.png")
 #plt.show()
 plt.clf()
 
-
+'''
 #VGG16 with batchnorm
 with open("results/keras/keras_vgg16_batchnorm", "rb") as f:
 	acc_keras_tr = pickle.load(f)
@@ -152,3 +156,4 @@ print("\t- Keras:", round(acc_keras_tr[-1]*100, 1), round(acc_keras_te[-1]*100, 
 print("\t- Pytorch:", round(acc_pytorch_tr[-1]*100, 1), round(acc_pytorch_te[-1]*100, 1))
 print("\t- EDDL:", round(acc_eddl_tr[-1]*100, 1), round(acc_eddl_te[-1]*100, 1))
 print()
+'''

@@ -15,7 +15,7 @@ def defblock(l, bn, nf, reps):
 eddl.download_cifar10()
 gpu = int(sys.argv[2]) == 1 if len(sys.argv) > 2 else True
 
-epochs = 50 if gpu else 1
+epochs = 10 if gpu else 1
 batch_size = 100
 num_classes = 10
 

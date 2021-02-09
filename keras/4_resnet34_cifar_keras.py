@@ -17,6 +17,8 @@ if gpu:
 	gpus = tf.config.experimental.list_physical_devices("GPU")
 	tf.config.experimental.set_memory_growth(gpus[0], True)
 
+sys_details = tf.sysconfig.get_build_info()
+print("CUDA version:", sys_details["cuda_version"], "; CUDNN version:", sys_details["cudnn_version"])
 (x_train,y_train),(x_test,y_test)=cifar10.load_data()
 x_train = x_train / 255
 x_test = x_test / 255
@@ -81,12 +83,12 @@ time_callback = TimeHistory()
 hist = model.fit(x_train, y_train,
 	epochs=50 if gpu else 1,
 	callbacks=[time_callback],
-	batch_size=100,
+	batch_size=50,
 	#validation_data=(x_test, y_test)
 	)
 
 print("Mean Time:", np.mean(time_callback.times))
-if gpu:
+if gpu and False:
 	with open("results/keras/keras_resnet34_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
 		pickle.dump(hist.history["accuracy"], f)
 	with open("results/keras/keras_val_resnet34_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:

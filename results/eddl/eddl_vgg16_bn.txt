@@ -1,400 +1,250 @@
 0
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.205 metric[categorical_accuracy]=0.536 ) -- 0.405 secs/batch
-202.706 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.337 metric[categorical_accuracy]=0.302 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0133 metric[categorical_accuracy]=0.5331 ) -- 0.1543 secs/batch
+77.1410 secs/epoch
 1
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.136 metric[categorical_accuracy]=0.714 ) -- 0.406 secs/batch
-203.124 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.197 metric[categorical_accuracy]=0.597 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0087 metric[categorical_accuracy]=0.7039 ) -- 0.1463 secs/batch
+73.1336 secs/epoch
 2
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.102 metric[categorical_accuracy]=0.794 ) -- 0.409 secs/batch
-204.573 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.237 metric[categorical_accuracy]=0.563 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0063 metric[categorical_accuracy]=0.7868 ) -- 0.1468 secs/batch
+73.3949 secs/epoch
 3
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.077 metric[categorical_accuracy]=0.851 ) -- 0.407 secs/batch
-203.260 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.229 metric[categorical_accuracy]=0.584 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0048 metric[categorical_accuracy]=0.8407 ) -- 0.1465 secs/batch
+73.2531 secs/epoch
 4
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.061 metric[categorical_accuracy]=0.884 ) -- 0.407 secs/batch
-203.466 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.246 metric[categorical_accuracy]=0.608 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0038 metric[categorical_accuracy]=0.8743 ) -- 0.1469 secs/batch
+73.4470 secs/epoch
 5
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.049 metric[categorical_accuracy]=0.907 ) -- 0.407 secs/batch
-203.361 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.233 metric[categorical_accuracy]=0.619 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0029 metric[categorical_accuracy]=0.9024 ) -- 0.1463 secs/batch
+73.1581 secs/epoch
 6
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.039 metric[categorical_accuracy]=0.927 ) -- 0.407 secs/batch
-203.359 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.211 metric[categorical_accuracy]=0.663 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0024 metric[categorical_accuracy]=0.9214 ) -- 0.1464 secs/batch
+73.1851 secs/epoch
 7
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.032 metric[categorical_accuracy]=0.941 ) -- 0.407 secs/batch
-203.391 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.243 metric[categorical_accuracy]=0.640 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0021 metric[categorical_accuracy]=0.9306 ) -- 0.1464 secs/batch
+73.2144 secs/epoch
 8
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.029 metric[categorical_accuracy]=0.947 ) -- 0.407 secs/batch
-203.646 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.221 metric[categorical_accuracy]=0.676 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0017 metric[categorical_accuracy]=0.9434 ) -- 0.1464 secs/batch
+73.1909 secs/epoch
 9
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.026 metric[categorical_accuracy]=0.952 ) -- 0.407 secs/batch
-203.288 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.238 metric[categorical_accuracy]=0.660 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0015 metric[categorical_accuracy]=0.9485 ) -- 0.1464 secs/batch
+73.2146 secs/epoch
 10
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.022 metric[categorical_accuracy]=0.959 ) -- 0.406 secs/batch
-203.161 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.208 metric[categorical_accuracy]=0.701 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0013 metric[categorical_accuracy]=0.9559 ) -- 0.1464 secs/batch
+73.1926 secs/epoch
 11
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.019 metric[categorical_accuracy]=0.965 ) -- 0.406 secs/batch
-203.100 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.225 metric[categorical_accuracy]=0.684 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0013 metric[categorical_accuracy]=0.9573 ) -- 0.1464 secs/batch
+73.1926 secs/epoch
 12
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.018 metric[categorical_accuracy]=0.967 ) -- 0.407 secs/batch
-203.292 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.217 metric[categorical_accuracy]=0.713 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0011 metric[categorical_accuracy]=0.9625 ) -- 0.1464 secs/batch
+73.2119 secs/epoch
 13
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.016 metric[categorical_accuracy]=0.970 ) -- 0.407 secs/batch
-203.306 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.334 metric[categorical_accuracy]=0.612 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0011 metric[categorical_accuracy]=0.9640 ) -- 0.1464 secs/batch
+73.1868 secs/epoch
 14
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.016 metric[categorical_accuracy]=0.971 ) -- 0.407 secs/batch
-203.277 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.203 metric[categorical_accuracy]=0.722 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0009 metric[categorical_accuracy]=0.9678 ) -- 0.1464 secs/batch
+73.2123 secs/epoch
 15
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.015 metric[categorical_accuracy]=0.973 ) -- 0.406 secs/batch
-203.241 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.209 metric[categorical_accuracy]=0.723 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0009 metric[categorical_accuracy]=0.9709 ) -- 0.1464 secs/batch
+73.2190 secs/epoch
 16
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.013 metric[categorical_accuracy]=0.976 ) -- 0.408 secs/batch
-203.857 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.240 metric[categorical_accuracy]=0.694 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0009 metric[categorical_accuracy]=0.9713 ) -- 0.1464 secs/batch
+73.1852 secs/epoch
 17
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.014 metric[categorical_accuracy]=0.975 ) -- 0.408 secs/batch
-204.039 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.216 metric[categorical_accuracy]=0.713 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0008 metric[categorical_accuracy]=0.9727 ) -- 0.1463 secs/batch
+73.1618 secs/epoch
 18
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.012 metric[categorical_accuracy]=0.979 ) -- 0.408 secs/batch
-204.225 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.225 metric[categorical_accuracy]=0.709 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0008 metric[categorical_accuracy]=0.9731 ) -- 0.1465 secs/batch
+73.2351 secs/epoch
 19
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.012 metric[categorical_accuracy]=0.979 ) -- 0.408 secs/batch
-203.979 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.235 metric[categorical_accuracy]=0.701 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0007 metric[categorical_accuracy]=0.9764 ) -- 0.1464 secs/batch
+73.1852 secs/epoch
 20
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.012 metric[categorical_accuracy]=0.978 ) -- 0.408 secs/batch
-203.864 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.230 metric[categorical_accuracy]=0.714 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0007 metric[categorical_accuracy]=0.9770 ) -- 0.1465 secs/batch
+73.2496 secs/epoch
 21
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.011 metric[categorical_accuracy]=0.981 ) -- 0.408 secs/batch
-204.061 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.221 metric[categorical_accuracy]=0.727 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0006 metric[categorical_accuracy]=0.9782 ) -- 0.1464 secs/batch
+73.2120 secs/epoch
 22
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.009 metric[categorical_accuracy]=0.983 ) -- 0.408 secs/batch
-203.923 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.247 metric[categorical_accuracy]=0.712 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0006 metric[categorical_accuracy]=0.9783 ) -- 0.1464 secs/batch
+73.2225 secs/epoch
 23
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.011 metric[categorical_accuracy]=0.981 ) -- 0.408 secs/batch
-203.911 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.239 metric[categorical_accuracy]=0.713 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0006 metric[categorical_accuracy]=0.9791 ) -- 0.1464 secs/batch
+73.1976 secs/epoch
 24
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.009 metric[categorical_accuracy]=0.985 ) -- 0.408 secs/batch
-204.137 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.214 metric[categorical_accuracy]=0.742 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0006 metric[categorical_accuracy]=0.9815 ) -- 0.1464 secs/batch
+73.1941 secs/epoch
 25
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.009 metric[categorical_accuracy]=0.984 ) -- 0.408 secs/batch
-204.024 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.233 metric[categorical_accuracy]=0.726 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0005 metric[categorical_accuracy]=0.9815 ) -- 0.1464 secs/batch
+73.2216 secs/epoch
 26
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.008 metric[categorical_accuracy]=0.986 ) -- 0.408 secs/batch
-204.070 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.213 metric[categorical_accuracy]=0.750 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0005 metric[categorical_accuracy]=0.9825 ) -- 0.1464 secs/batch
+73.1944 secs/epoch
 27
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.009 metric[categorical_accuracy]=0.984 ) -- 0.408 secs/batch
-204.071 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.219 metric[categorical_accuracy]=0.734 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0006 metric[categorical_accuracy]=0.9816 ) -- 0.1464 secs/batch
+73.2139 secs/epoch
 28
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.008 metric[categorical_accuracy]=0.986 ) -- 0.408 secs/batch
-204.166 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.228 metric[categorical_accuracy]=0.731 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0005 metric[categorical_accuracy]=0.9834 ) -- 0.1464 secs/batch
+73.2053 secs/epoch
 29
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.008 metric[categorical_accuracy]=0.987 ) -- 0.408 secs/batch
-204.194 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.269 metric[categorical_accuracy]=0.695 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0005 metric[categorical_accuracy]=0.9837 ) -- 0.1464 secs/batch
+73.2080 secs/epoch
 30
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.988 ) -- 0.408 secs/batch
-204.161 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.210 metric[categorical_accuracy]=0.740 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9850 ) -- 0.1463 secs/batch
+73.1521 secs/epoch
 31
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.987 ) -- 0.408 secs/batch
-203.981 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.229 metric[categorical_accuracy]=0.738 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0005 metric[categorical_accuracy]=0.9837 ) -- 0.1463 secs/batch
+73.1594 secs/epoch
 32
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.987 ) -- 0.408 secs/batch
-203.974 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.215 metric[categorical_accuracy]=0.742 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9858 ) -- 0.1466 secs/batch
+73.2763 secs/epoch
 33
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.988 ) -- 0.408 secs/batch
-204.194 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.258 metric[categorical_accuracy]=0.713 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9861 ) -- 0.1463 secs/batch
+73.1597 secs/epoch
 34
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.989 ) -- 0.408 secs/batch
-204.089 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.254 metric[categorical_accuracy]=0.720 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9864 ) -- 0.1464 secs/batch
+73.1871 secs/epoch
 35
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.989 ) -- 0.408 secs/batch
-203.979 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.214 metric[categorical_accuracy]=0.748 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9882 ) -- 0.1464 secs/batch
+73.1865 secs/epoch
 36
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.991 ) -- 0.408 secs/batch
-204.143 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.247 metric[categorical_accuracy]=0.723 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9873 ) -- 0.1464 secs/batch
+73.2145 secs/epoch
 37
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.987 ) -- 0.408 secs/batch
-204.025 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.235 metric[categorical_accuracy]=0.741 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9851 ) -- 0.1464 secs/batch
+73.2164 secs/epoch
 38
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.990 ) -- 0.409 secs/batch
-204.315 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.223 metric[categorical_accuracy]=0.753 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9883 ) -- 0.1464 secs/batch
+73.2103 secs/epoch
 39
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.007 metric[categorical_accuracy]=0.988 ) -- 0.408 secs/batch
-203.996 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.219 metric[categorical_accuracy]=0.749 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9877 ) -- 0.1464 secs/batch
+73.2210 secs/epoch
 40
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.992 ) -- 0.408 secs/batch
-204.103 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.246 metric[categorical_accuracy]=0.736 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9894 ) -- 0.1464 secs/batch
+73.2151 secs/epoch
 41
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.989 ) -- 0.408 secs/batch
-204.048 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.237 metric[categorical_accuracy]=0.740 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0004 metric[categorical_accuracy]=0.9878 ) -- 0.1464 secs/batch
+73.2246 secs/epoch
 42
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.990 ) -- 0.408 secs/batch
-204.161 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.219 metric[categorical_accuracy]=0.758 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9888 ) -- 0.1464 secs/batch
+73.2121 secs/epoch
 43
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.992 ) -- 0.408 secs/batch
-203.932 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.242 metric[categorical_accuracy]=0.738 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9903 ) -- 0.1464 secs/batch
+73.1955 secs/epoch
 44
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.992 ) -- 0.408 secs/batch
-204.091 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.239 metric[categorical_accuracy]=0.747 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9887 ) -- 0.1464 secs/batch
+73.2183 secs/epoch
 45
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.990 ) -- 0.408 secs/batch
-204.135 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.250 metric[categorical_accuracy]=0.737 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9900 ) -- 0.1464 secs/batch
+73.2212 secs/epoch
 46
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.004 metric[categorical_accuracy]=0.992 ) -- 0.408 secs/batch
-204.224 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.223 metric[categorical_accuracy]=0.764 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9900 ) -- 0.1464 secs/batch
+73.2173 secs/epoch
 47
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.006 metric[categorical_accuracy]=0.990 ) -- 0.408 secs/batch
-204.178 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.222 metric[categorical_accuracy]=0.754 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9902 ) -- 0.1464 secs/batch
+73.2201 secs/epoch
 48
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.005 metric[categorical_accuracy]=0.992 ) -- 0.408 secs/batch
-204.050 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.227 metric[categorical_accuracy]=0.757 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9892 ) -- 0.1464 secs/batch
+73.2181 secs/epoch
 49
 1 epochs of 500 batches of size 100
 Epoch 1
-Batch 500 softmax16 ( loss[soft_cross_entropy]=0.004 metric[categorical_accuracy]=0.993 ) -- 0.408 secs/batch
-204.132 secs/epoch
-Evaluate test:
-Evaluate with batch size 100
-Batch 100 softmax16 ( loss[soft_cross_entropy]=0.213 metric[categorical_accuracy]=0.764 ) -- 
+Batch 500 softmax16 ( loss[softmax_cross_entropy]=0.0003 metric[categorical_accuracy]=0.9911 ) -- 0.1464 secs/batch
+73.2048 secs/epoch

@@ -15,12 +15,12 @@ def defblock(l, bn, nf, reps, initializer):
 eddl.download_cifar10()
 gpu = int(sys.argv[2]) == 1 if len(sys.argv) > 2 else True
 
-epochs = 50 if gpu else 1
+epochs = 10 if gpu else 1
 batch_size = 50
 num_classes = 10
 
 bn = int(sys.argv[1]) == 1
-initializer = eddl.GlorotUniform if bn else eddl.HeUniform
+initializer = eddl.GlorotUniform# if bn else eddl.HeUniform
 
 inp = eddl.Input([3, 32, 32])
 l = inp

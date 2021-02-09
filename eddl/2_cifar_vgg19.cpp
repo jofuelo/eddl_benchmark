@@ -39,7 +39,7 @@ layer defblock(layer l, bool bn, int nf, int reps){
 int main(int argc, char **argv) {
   // download CIFAR data
   download_cifar10();
-    bool gpu = false;
+    bool gpu = true;
 
     // Settings
     int epochs = gpu ? 50 : 1;
@@ -106,8 +106,8 @@ int main(int argc, char **argv) {
     	fit(net,{x_train},{y_train},batch_size, 1);
 
     	// Evaluate train
-    	std::cout << "Evaluate test:" << std::endl;
-    	evaluate(net,{x_test},{y_test});
+    	//std::cout << "Evaluate test:" << std::endl;
+    	//evaluate(net,{x_test},{y_test});
 	}
 
 }

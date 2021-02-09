@@ -1,0 +1,360 @@
+digraph Model {
+rankdir=LR;
+conv1 [label="conv1",style=filled,fontsize=12,fillcolor=White,shape=box]
+maxpool2 [label="maxpool2",style=filled,fontsize=12,fillcolor=gray75,shape=box]
+conv2 [label="conv2",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm1 [label="batchnorm1",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu1 [label="relu1",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv3 [label="conv3",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm2 [label="batchnorm2",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu2 [label="relu2",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv4 [label="conv4",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm3 [label="batchnorm3",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add1 [label="merge_add1",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu3 [label="relu3",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv6 [label="conv6",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm4 [label="batchnorm4",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu4 [label="relu4",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv7 [label="conv7",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm5 [label="batchnorm5",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu5 [label="relu5",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv8 [label="conv8",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm6 [label="batchnorm6",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add2 [label="merge_add2",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu6 [label="relu6",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv9 [label="conv9",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm7 [label="batchnorm7",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu7 [label="relu7",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv10 [label="conv10",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm8 [label="batchnorm8",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu8 [label="relu8",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv11 [label="conv11",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm9 [label="batchnorm9",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add3 [label="merge_add3",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu9 [label="relu9",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv12 [label="conv12",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm10 [label="batchnorm10",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu10 [label="relu10",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv13 [label="conv13",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm11 [label="batchnorm11",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu11 [label="relu11",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv14 [label="conv14",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm12 [label="batchnorm12",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add4 [label="merge_add4",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu12 [label="relu12",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv16 [label="conv16",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm13 [label="batchnorm13",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu13 [label="relu13",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv17 [label="conv17",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm14 [label="batchnorm14",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu14 [label="relu14",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv18 [label="conv18",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm15 [label="batchnorm15",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add5 [label="merge_add5",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu15 [label="relu15",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv19 [label="conv19",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm16 [label="batchnorm16",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu16 [label="relu16",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv20 [label="conv20",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm17 [label="batchnorm17",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu17 [label="relu17",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv21 [label="conv21",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm18 [label="batchnorm18",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add6 [label="merge_add6",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu18 [label="relu18",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv22 [label="conv22",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm19 [label="batchnorm19",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu19 [label="relu19",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv23 [label="conv23",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm20 [label="batchnorm20",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu20 [label="relu20",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv24 [label="conv24",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm21 [label="batchnorm21",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add7 [label="merge_add7",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu21 [label="relu21",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv25 [label="conv25",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm22 [label="batchnorm22",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu22 [label="relu22",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv26 [label="conv26",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm23 [label="batchnorm23",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu23 [label="relu23",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv27 [label="conv27",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm24 [label="batchnorm24",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add8 [label="merge_add8",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu24 [label="relu24",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv29 [label="conv29",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm25 [label="batchnorm25",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu25 [label="relu25",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv30 [label="conv30",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm26 [label="batchnorm26",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu26 [label="relu26",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv31 [label="conv31",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm27 [label="batchnorm27",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add9 [label="merge_add9",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu27 [label="relu27",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv32 [label="conv32",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm28 [label="batchnorm28",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu28 [label="relu28",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv33 [label="conv33",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm29 [label="batchnorm29",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu29 [label="relu29",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv34 [label="conv34",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm30 [label="batchnorm30",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add10 [label="merge_add10",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu30 [label="relu30",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv35 [label="conv35",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm31 [label="batchnorm31",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu31 [label="relu31",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv36 [label="conv36",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm32 [label="batchnorm32",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu32 [label="relu32",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv37 [label="conv37",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm33 [label="batchnorm33",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add11 [label="merge_add11",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu33 [label="relu33",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv38 [label="conv38",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm34 [label="batchnorm34",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu34 [label="relu34",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv39 [label="conv39",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm35 [label="batchnorm35",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu35 [label="relu35",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv40 [label="conv40",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm36 [label="batchnorm36",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add12 [label="merge_add12",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu36 [label="relu36",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv41 [label="conv41",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm37 [label="batchnorm37",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu37 [label="relu37",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv42 [label="conv42",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm38 [label="batchnorm38",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu38 [label="relu38",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv43 [label="conv43",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm39 [label="batchnorm39",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add13 [label="merge_add13",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu39 [label="relu39",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv44 [label="conv44",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm40 [label="batchnorm40",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu40 [label="relu40",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv45 [label="conv45",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm41 [label="batchnorm41",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu41 [label="relu41",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv46 [label="conv46",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm42 [label="batchnorm42",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add14 [label="merge_add14",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu42 [label="relu42",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv48 [label="conv48",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm43 [label="batchnorm43",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu43 [label="relu43",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv49 [label="conv49",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm44 [label="batchnorm44",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu44 [label="relu44",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv50 [label="conv50",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm45 [label="batchnorm45",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add15 [label="merge_add15",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu45 [label="relu45",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv51 [label="conv51",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm46 [label="batchnorm46",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu46 [label="relu46",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv52 [label="conv52",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm47 [label="batchnorm47",style=filled,fontsize=12,fillcolor=White,shape=box]
+relu47 [label="relu47",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+conv53 [label="conv53",style=filled,fontsize=12,fillcolor=White,shape=box]
+batchnorm48 [label="batchnorm48",style=filled,fontsize=12,fillcolor=White,shape=box]
+merge_add16 [label="merge_add16",style=filled,fontsize=12,fillcolor=lightblue3,shape=box]
+relu48 [label="relu48",style=filled,fontsize=12,fillcolor=LightSalmon,shape=box]
+avgpool4 [label="avgpool4",style=filled,fontsize=12,fillcolor=gray75,shape=box]
+reshape1 [label="reshape1",style=filled,fontsize=12,fillcolor=gray75,shape=box]
+dense1 [label="dense1",style=filled,fontsize=12,fillcolor=White,shape=box]
+conv47 [label="conv47",style=filled,fontsize=12,fillcolor=White,shape=box]
+conv28 [label="conv28",style=filled,fontsize=12,fillcolor=White,shape=box]
+conv15 [label="conv15",style=filled,fontsize=12,fillcolor=White,shape=box]
+conv5 [label="conv5",style=filled,fontsize=12,fillcolor=White,shape=box]
+input1 [label="input1",style=filled,fontsize=12,fillcolor=LightBlue,shape=box]
+softmax49 [label="softmax49",style=filled,fontsize=12,fillcolor=LightBlue,shape=box]
+input1->conv1
+conv1->maxpool2
+maxpool2->conv2
+maxpool2->conv5
+conv2->batchnorm1
+batchnorm1->relu1
+relu1->conv3
+conv3->batchnorm2
+batchnorm2->relu2
+relu2->conv4
+conv4->batchnorm3
+batchnorm3->merge_add1
+merge_add1->relu3
+relu3->conv6
+relu3->merge_add2
+conv6->batchnorm4
+batchnorm4->relu4
+relu4->conv7
+conv7->batchnorm5
+batchnorm5->relu5
+relu5->conv8
+conv8->batchnorm6
+batchnorm6->merge_add2
+merge_add2->relu6
+relu6->conv9
+relu6->merge_add3
+conv9->batchnorm7
+batchnorm7->relu7
+relu7->conv10
+conv10->batchnorm8
+batchnorm8->relu8
+relu8->conv11
+conv11->batchnorm9
+batchnorm9->merge_add3
+merge_add3->relu9
+relu9->conv12
+relu9->conv15
+conv12->batchnorm10
+batchnorm10->relu10
+relu10->conv13
+conv13->batchnorm11
+batchnorm11->relu11
+relu11->conv14
+conv14->batchnorm12
+batchnorm12->merge_add4
+merge_add4->relu12
+relu12->conv16
+relu12->merge_add5
+conv16->batchnorm13
+batchnorm13->relu13
+relu13->conv17
+conv17->batchnorm14
+batchnorm14->relu14
+relu14->conv18
+conv18->batchnorm15
+batchnorm15->merge_add5
+merge_add5->relu15
+relu15->conv19
+relu15->merge_add6
+conv19->batchnorm16
+batchnorm16->relu16
+relu16->conv20
+conv20->batchnorm17
+batchnorm17->relu17
+relu17->conv21
+conv21->batchnorm18
+batchnorm18->merge_add6
+merge_add6->relu18
+relu18->conv22
+relu18->merge_add7
+conv22->batchnorm19
+batchnorm19->relu19
+relu19->conv23
+conv23->batchnorm20
+batchnorm20->relu20
+relu20->conv24
+conv24->batchnorm21
+batchnorm21->merge_add7
+merge_add7->relu21
+relu21->conv25
+relu21->conv28
+conv25->batchnorm22
+batchnorm22->relu22
+relu22->conv26
+conv26->batchnorm23
+batchnorm23->relu23
+relu23->conv27
+conv27->batchnorm24
+batchnorm24->merge_add8
+merge_add8->relu24
+relu24->conv29
+relu24->merge_add9
+conv29->batchnorm25
+batchnorm25->relu25
+relu25->conv30
+conv30->batchnorm26
+batchnorm26->relu26
+relu26->conv31
+conv31->batchnorm27
+batchnorm27->merge_add9
+merge_add9->relu27
+relu27->conv32
+relu27->merge_add10
+conv32->batchnorm28
+batchnorm28->relu28
+relu28->conv33
+conv33->batchnorm29
+batchnorm29->relu29
+relu29->conv34
+conv34->batchnorm30
+batchnorm30->merge_add10
+merge_add10->relu30
+relu30->conv35
+relu30->merge_add11
+conv35->batchnorm31
+batchnorm31->relu31
+relu31->conv36
+conv36->batchnorm32
+batchnorm32->relu32
+relu32->conv37
+conv37->batchnorm33
+batchnorm33->merge_add11
+merge_add11->relu33
+relu33->conv38
+relu33->merge_add12
+conv38->batchnorm34
+batchnorm34->relu34
+relu34->conv39
+conv39->batchnorm35
+batchnorm35->relu35
+relu35->conv40
+conv40->batchnorm36
+batchnorm36->merge_add12
+merge_add12->relu36
+relu36->conv41
+relu36->merge_add13
+conv41->batchnorm37
+batchnorm37->relu37
+relu37->conv42
+conv42->batchnorm38
+batchnorm38->relu38
+relu38->conv43
+conv43->batchnorm39
+batchnorm39->merge_add13
+merge_add13->relu39
+relu39->conv44
+relu39->conv47
+conv44->batchnorm40
+batchnorm40->relu40
+relu40->conv45
+conv45->batchnorm41
+batchnorm41->relu41
+relu41->conv46
+conv46->batchnorm42
+batchnorm42->merge_add14
+merge_add14->relu42
+relu42->conv48
+relu42->merge_add15
+conv48->batchnorm43
+batchnorm43->relu43
+relu43->conv49
+conv49->batchnorm44
+batchnorm44->relu44
+relu44->conv50
+conv50->batchnorm45
+batchnorm45->merge_add15
+merge_add15->relu45
+relu45->conv51
+relu45->merge_add16
+conv51->batchnorm46
+batchnorm46->relu46
+relu46->conv52
+conv52->batchnorm47
+batchnorm47->relu47
+relu47->conv53
+conv53->batchnorm48
+batchnorm48->merge_add16
+merge_add16->relu48
+relu48->avgpool4
+avgpool4->reshape1
+reshape1->dense1
+dense1->softmax49
+conv47->merge_add14
+conv28->merge_add8
+conv15->merge_add4
+conv5->merge_add1
+}

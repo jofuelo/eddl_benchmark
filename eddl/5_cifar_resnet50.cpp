@@ -42,14 +42,14 @@ layer resnet_block(layer l0, int nf, bool bn, int reps, bool downsample){
 int main(int argc, char **argv) {
   // download CIFAR data
   download_cifar10();
-    bool gpu = false;
+    bool gpu = true;
 
     // Settings
     int epochs = gpu ? 50 : 1;
     int batch_size = 50;
     int num_classes = 10;
 
-    bool bn = true;
+    bool bn = false;
 
 
     // Define network

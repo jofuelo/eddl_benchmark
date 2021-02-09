@@ -101,6 +101,9 @@ model.apply(weights_init)
 
 model=model.to(device)
 summary(model, (3,32,32))
+print("Cuda version:", torch.version.cuda)
+print("Cudnn version:", torch.backends.cudnn.version())
+print("Cudnn enabled:", torch.backends.cudnn.enabled)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -143,7 +146,7 @@ for epoch in range(num_epochs):
 
     times.append(time()-s)
 
-    if gpu:
+    if False and gpu:
         total_test = 0
         correct_test = 0
         for i, (images, labels) in enumerate(test_loader):
@@ -164,7 +167,7 @@ for epoch in range(num_epochs):
 
 
 print("Mean time:", np.mean(times))
-if gpu:
+if False and gpu:
     with open("results/pytorch/pytorch_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
         pickle.dump(acc_list, f)
     with open("results/pytorch/pytorch_val_resnet50_"+("batchnorm" if bn else "no_batchnorm"), "wb") as f:
