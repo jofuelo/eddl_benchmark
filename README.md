@@ -14,12 +14,15 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |Without batchnorm|57|88|68|
 |With batchnorm|64|93|73|
 
+![Results plot](vgg16.png)
 
 ### VGG19
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|104|137|115|
 |With batchnorm|111|144|124|
+
+![Results plot](vgg19.png)
 
 
 ### Resnet18
@@ -28,6 +31,8 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |Without batchnorm|39|80|38|
 |With batchnorm|40|82|40|
 
+![Results plot](resnet18.png)
+
 
 ### Resnet34
 |Experiment|Keras|Pytorch|EDDL|
@@ -35,12 +40,16 @@ For these experiments, pytorch version is 1.7.1 and tensorflow version is 2.4.0 
 |Without batchnorm|65|138|65|
 |With batchnorm|69|142|71|
 
+![Results plot](resnet34.png)
+
 
 ### Resnet50
 |Experiment|Keras|Pytorch|EDDL|
 |------------- | ---------- | ----------- |------|
 |Without batchnorm|67|113|80|
 |With batchnorm|76|122|93|
+
+![Results plot](resnet50.png)
 
 ---
 
